@@ -84,8 +84,5 @@
         }
 
     }
-
-    $run = new chi();
-    $run->main();
     
 ?>
