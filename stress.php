@@ -82,11 +82,12 @@ require_once('chi.php');
                         $dc = in_array($docCos, $documentLevel[$keyLevel])? 1:0;
                         $x += $cosineValue * $dc;
                         $y += $cosineValue;
-                        if($threshold == $k){
-                            break;
-                        }else{
-                            $threshold++;
-                        }
+                        $threshold == $k? break : $threshold++;
+                        #if($threshold == $k){
+                        #    break;
+                        #}else{
+                        #    $threshold++;
+                        #}
                     }
                     $xy = $x/$y;
                     $prob[$docKey][$keyLevel] = $xy;
